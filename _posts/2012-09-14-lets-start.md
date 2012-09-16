@@ -3,7 +3,7 @@ layout: post
 title: "Let's Start"
 tagline: "The Beginning"
 description: "The start of the blogging experience"
-category:
+categoies: [Aerogear, JBoss, Red Hat]
 tags: [first post, starting, Spinal Tap]
 date: 2012-09-15
 ---
