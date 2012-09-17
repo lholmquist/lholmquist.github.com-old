@@ -4,7 +4,7 @@ title: "Story Creator - Part 1"
 tagline: "The Idea"
 description: "The story behind the story creator and where it's going"
 categories: [Aerogear, JBoss, Ideas, Personal]
-tags: [javascript, bootstrap, aerogear-js, java]
+tags: [javascript, bootstrap, java]
 ---
 {% include JB/setup %}
 
