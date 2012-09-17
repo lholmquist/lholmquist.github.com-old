@@ -56,6 +56,4 @@ I needed to define what the essential and most important parts of this app shoul
 
 With the thoughts written down i set out to create this app.
 
-![Random LOL Cat](http://files.sharenator.com/funny_pictures_cat_dog_paper_bag_shrubbery_holy_grail_LOL_Cats-s500x329-79798-580.jpg)
-
-
+![lolcat](http://i.chzbgr.com/completestore/2011/1/17/5d697fc6-680d-4169-954f-ed5fb9db0ecb.jpg)
