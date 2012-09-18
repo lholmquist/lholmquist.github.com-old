@@ -4,7 +4,7 @@ title: "Story Creator - Part 1"
 tagline: "The Idea"
 description: "The story behind the story creator and where it's going"
 categories: [Aerogear, JBoss, Ideas, Personal]
-tags: [javascript, bootstrap, java]
+tags: [javascript, bootstrap, java, OpenShift]
 ---
 {% include JB/setup %}
 
@@ -54,6 +54,10 @@ I needed to define what the essential and most important parts of this app shoul
 
 
 
-With the thoughts written down i set out to create this app.
+With the thoughts written down i set out to create this app. [Part 2]({{ BASE_PATH }}{{ page.next.url }})
 
 ![lolcat](http://i.chzbgr.com/completestore/2011/1/17/5d697fc6-680d-4169-954f-ed5fb9db0ecb.jpg)
+
+
+
+_Note: The first few post won't have much code since ** Spoiler Alert ** i wasn't to happy with how the front end came out.  The backend i liked.  So the early posts will be about the idea and some of the things i used.  The later post should have more code once i start the refactor process. ** End Spoilers ** .  The code is [here](https://github.com/lholmquist/storycreator.git) for those looking for something.  Be Warned, it probably is broken. _
