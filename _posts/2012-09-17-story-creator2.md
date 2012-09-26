@@ -51,7 +51,7 @@ Here is a quick, abbreviated selection of some of the commands i used in forge:
 
     persistence setup
 
-There is more to it than that,  put not much.
+There is more to it than that,  but not much.
 
 Now i had a nice maven project with all the things i needed for the backend to get started.
 
