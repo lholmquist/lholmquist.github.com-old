@@ -57,7 +57,7 @@ Now i had a nice maven project with all the things i needed for the backend to g
 
 ### Up Next:
 
-The Front End - Take One..... Be Patient, I'm still writing it
+The Front End - Take One.....[Part 3]({{ BASE_PATH }}{{ page.next.url }})
 
 ![lolcat](http://i.chzbgr.com/completestore/2008/9/1/bringmeashr128647906558177409.jpg)
 
