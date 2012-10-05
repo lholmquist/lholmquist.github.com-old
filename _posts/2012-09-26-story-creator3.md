@@ -2,7 +2,7 @@
 layout: post
 title: "Story Creator - Part 3"
 description: ""
-tagline: "The Front End"
+tagline: "The Front End - Take One"
 description: "The story behind the story creator and where it's going"
 categories: [Aerogear, JBoss, Ideas, Personal]
 tags: [javascript, bootstrap, java, Backbone, JBoss Forge, OpenShift]
