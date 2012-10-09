@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Starting Over"
+date: 2012-10-05 15:00:00
 description: "The starting over process"
 tagline: "Take Two - part 1"
 description: "The story behind the story creator and where it's going"
