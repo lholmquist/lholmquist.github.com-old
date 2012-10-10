@@ -3,7 +3,7 @@ layout: post
 title: "Aerogear, meet World of Warcraft"
 description: "Trying to use pipeline to connect to WoW REST api"
 tagline: epicness, part 2
-date: 2012-10-08 16:00:00
+date: 2012-10-10 16:00:00
 categories: [Personal, Aerogear]
 tags: [aerogear.js, REST, WoW]
 published: true
