@@ -27,7 +27,7 @@ I also realized i had no security on my REST endpoints.  So anyone could spam th
 
 That should bring us up to the present.  It was time to rewrite this thing, and make it better.  Most of the backend i liked, beside no security, but the front end would need some more work.
 
-To Be Continued........
+To Be Continued........[Go There Now]({{ BASE_PATH }}{{ page.next.url }})
 
 
 ![lolcat](http://www.clickuntilyoulaugh.com/wp-content/uploads/2012/02/funniest-lolcat-pics-uninterested.jpg)
