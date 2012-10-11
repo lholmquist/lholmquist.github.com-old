@@ -51,10 +51,10 @@ We decide that we would like to specify using jsonp at the creation of our pipe 
 	var pipeline = AeroGear.Pipeline();
 
     pipeline.add( {
-        name: "wowPipe",
+        name: "achievement",
         settings: {
             baseURL: "http://us.battle.net/api/wow/",
-            endpoint: "achievement/2144", //this might be better somewhere else
+            endpoint: "achievement",
             jsonp: true
         }
     } );
@@ -67,21 +67,26 @@ Ah, much cleaner.  Now lets modify aerogear.js:
         var endpoint = settings.endpoint || pipeName,
             ajaxSettings = {
                 // use the pipeName as the default rest endpoint
-                url: settings.baseURL ? settings.baseURL + endpoint : endpoint,
-                //Modified version
-                jsonp :settings.jsonp ? "jsonp" : null,
-                dataType: settings.jsonp ? "jsonp" : "json",
-                jsonpCallback: ( settings.jsonp && settings.callback ) ? settings.callback : null
-                //End Modified Version
+                url: settings.baseURL ? settings.baseURL + endpoint : endpoint
             },
             ........
+
+            if( settings.jsonp ) {
+                ajaxSettings.jsonp = "jsonp",
+                ajaxSettings.dataType = "jsonp";
+
+                if( settings.callback ) {
+                    ajaxSettings.jsonpCallback = settings.callback;
+                }
+            }
         }
 
 Now, when we use our aerogear pipe, we get the same as the jQuery one:
 
-	var wowPipe = pipeline.pipes.wowPipe;
+	var achievementPipe = pipeline.pipes.achievement;
 
-    wowPipe.read( {
+    achievementPipe.read( {
+        id: 2144,
         success:function( data ) {
             console.log( data );
         }
