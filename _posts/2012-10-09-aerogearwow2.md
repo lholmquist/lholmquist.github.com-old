@@ -12,7 +12,7 @@ published: true
 
 ## Early Quests
 
-Now that we have finished checking out the documentation, for both AeroGear.js and the WoW REST API, we can pick up some more quests and level up, getting us closer to a run through Deadmines.  And by Deadmines, i mean call this API from Aerogear.js
+Now that we have [finished checking out the documentation]({{ BASE_PATH }}{{ page.previous.url }}), for both AeroGear.js and the WoW REST API, we can pick up some more quests and level up, getting us closer to a run through Deadmines.  And by Deadmines, i mean call this API from Aerogear.js so we can check our realm status.
 
 ## Our First Elite And Group Quest
 
@@ -50,14 +50,19 @@ We decide that we would like to specify using jsonp at the creation of our pipe 
 
 	var pipeline = AeroGear.Pipeline();
 
-    pipeline.add( {
-        name: "achievement",
-        settings: {
-            baseURL: "http://us.battle.net/api/wow/",
-            endpoint: "achievement",
-            jsonp: true
+    pipeline.add([
+        {
+            name: "realmStatus",
+            settings: {
+                baseURL: baseURL,
+                endpoint: "realm/status",
+                jsonp: {
+                    jsonp: 'jsonp'
+                    //callback: 'customCallback'
+                }
+            }
         }
-    } );
+    ]);
 
 Ah, much cleaner.  Now lets modify aerogear.js:
 
@@ -72,10 +77,10 @@ Ah, much cleaner.  Now lets modify aerogear.js:
             ........
 
             if( settings.jsonp ) {
-                ajaxSettings.jsonp = "jsonp",
-                ajaxSettings.dataType = "jsonp";
+                ajaxSettings.dataType = "jsonp",
+                ajaxSettings.jsonp = settings.jsonp.jsonp ? settings.jsonp.jsonp : "callback";
 
-                if( settings.callback ) {
+                if( settings.jsonp.callback ) {
                     ajaxSettings.jsonpCallback = settings.callback;
                 }
             }
@@ -83,15 +88,13 @@ Ah, much cleaner.  Now lets modify aerogear.js:
 
 Now, when we use our aerogear pipe, we get the same as the jQuery one:
 
-	var achievementPipe = pipeline.pipes.achievement;
+	var realmStatusPipe = pipeline.pipes.realmStatus;
 
-    achievementPipe.read( {
-        id: 2144,
+    realmStatusPipe.read( {
         success:function( data ) {
             console.log( data );
         }
     });
-
 
 
 Now that we have something that works, we send these idea's to the Aerogear-Dev Mailing List to get feedback so it will become part of Aerogear.js
@@ -100,5 +103,7 @@ Now that we have something that works, we send these idea's to the Aerogear-Dev 
 ## Up Next:
 
 Continuing to Westfall( Using the Aerogear Datamanager ).
+
+[Accept Summon to Next Post]({{ BASE_PATH }}{{ page.next.url }})
 
 ![lolcat](http://3.bp.blogspot.com/_fr44lIzC03k/TO3ZHO7d9HI/AAAAAAAACQ4/ZmolDiykmrE/s1600/lolcat+rainbow.jpeg)
