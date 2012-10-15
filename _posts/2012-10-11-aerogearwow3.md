@@ -46,6 +46,8 @@ this will produce a list of the realm names and their statuses.  Not very pretty
 
 We travel to the Deadmines,  which means we make the UI nicer.
 
+[Accept Summon to Next Post]({{ BASE_PATH }}{{ page.next.url }})
+
 
 [fork the source](https://github.com/lholmquist/WoWAerogear)
 
