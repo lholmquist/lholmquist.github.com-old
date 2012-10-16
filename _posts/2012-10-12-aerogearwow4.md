@@ -70,6 +70,10 @@ Deadmines: Hard Mode.  we add in some jQuery Mobile and have some navigation to 
 
 [fork the source](https://github.com/lholmquist/WoWAerogear)
 
+_note:  The next post totally changes the UI(think of it as a revamp of the talent tree),  i've tagged the bootstrap version as 1.0 in github_
+
+[Accept Summon to Next Post]({{ BASE_PATH }}{{ page.next.url }})
+
 ![lolcat](http://lolcat.com/pics/purplzkitty.jpg)
 
 
