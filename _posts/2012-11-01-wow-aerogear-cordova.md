@@ -80,10 +80,68 @@ What we see should be exactly the same as the previous web app, but this time it
 
 *Note: We are still using the AeroGear.js library from the mobile app.*
 
-## Next Up
 
-Next time we will attempt to change specs, and create an Apache Cordova iOS version.
+## Creating the Druid with Spec 2( iOS )
 
+Now that we have an Apache Cordova Android version, our next quest is to create the iOS version.  This should be super easy now that we have the other one setup.
+
+So the first thing you do is go to your class trainer and by dual spec( that means you create a new project ).
+
+To create the project:
+
+    $ cd wowaerogear-cordova
+
+    $ path/to/cordova/lib/ios/bin/create ./ios wowaerogear.ios.cordova WowAeroGeariOSCordova
+
+
+This will give us our xcode project, but there is just thing we need to do.  If you remember from our previous quest, we need to set up a symbolic link to our shared www folder.
+
+	$ cd ios
+	$ rm -rf www
+	$ ln -s ../../shared/www www
+
+
+Ok,  now lets open up our project in xcode
+
+With the project open, we need to add on file,  the ios cordova.js file.  Lets rename it to cordova-ios-2.1.0.js
+
+Now we need to modify our index.html a little bit so it will load the correct JavaScript file depending on what device we are on.
+
+	<script>
+        if ( navigator.userAgent == "WowAeroGear Cordova Webview iOS" ) {
+            document.write( '<script src="js/libs/cordova-ios-2.1.0.js"><\/script>' );
+        } else {
+            document.write( '<script src="js/libs/cordova-android-2.1.0.js"><\/script>' );
+        }
+    </script>
+
+Now in the AppDelegate.m file, add this little block of code in the init function:
+
+	NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:@"AeroGearWow Cordova Webview iOS", @"UserAgent", nil];
+    	[[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
+    	[dictionnary release];
+
+The above code will modify the userAgent.
+
+One more thing,  we need to "whitelist" the server so we can contact it.
+
+We need to edit the Cordova.plist file.  This is located in the resources folder.
+
+Under externalHosts, click the + symbol and put a "\*" for the value *this will whitelist all servers, in production you should be specific*
+
+
+Now we should be able to run it.   Quest Complete!!
+
+Now that our mobile app is installed on the device,  we can get access to more device things,  like the camera, accelerometer and some other things that the mobile web can't do.
+
+## Next Steps
+
+Now that you know how to play your new class,  try adding some class specific stuff, and by that i mean cordova lets us get access to native device features in our javascript.
+
+
+## Coming Up
+
+With Mobile Web and Hybrid Down,  It's time to start some endgame content. And by that i mean Native AeroGear Libraries!!!!!!!!    and one more just because !
 
 [Fork the Source](https://github.com/lholmquist/WoWAerogear-cordova)
 
