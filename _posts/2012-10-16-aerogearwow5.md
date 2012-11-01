@@ -87,4 +87,6 @@ Now that we have finished Deadmines,  it's time to go to some higher level Zones
 
 [fork the source](https://github.com/lholmquist/WoWAerogear)
 
+[Accept Summon to Next Post]({{ BASE_PATH }}{{ page.next.url }})
+
 ![lolcat](http://2.bp.blogspot.com/_tlJ1qktf2lA/THBp5YFKX7I/AAAAAAAAACM/4T7S57yjcBo/s1600/funny-pictures-your-cat-is-almost-level-68.jpg)
