@@ -7,6 +7,7 @@ date: 2012-10-10 16:00:00
 categories: [Personal, Aerogear]
 tags: [aerogear.js, REST, WoW]
 published: true
+group: wowaerogear
 ---
 {% include JB/setup %}
 

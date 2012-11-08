@@ -6,6 +6,7 @@ tagline: epicness, part 3
 categories: [Personal, Aerogear]
 tags: [aerogear.js, REST, WoW]
 published: true
+group: wowaerogear
 ---
 {% include JB/setup %}
 
