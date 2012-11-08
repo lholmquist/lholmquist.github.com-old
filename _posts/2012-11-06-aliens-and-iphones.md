@@ -152,12 +152,6 @@ For those following along, our new test class should look something like this:
             return createTestDeployment();
         }
 
-         /*
-         This is not the code you are looking for,  Move Along
-         public static WebArchive createNewOne() {
-             return ShrinkWrap.create(MavenImporter.class) .loadEffectivePom("pom.xml") .importBuildOutput() .as(WebArchive.class    ) ;
-         } */
-
         public static WebArchive createTestDeployment() {
             WebArchive war = ShrinkWrap.create(WebArchive.class)
                     .addClasses(Member.class, MemberService.class, MemberRepository.class,
@@ -166,8 +160,6 @@ For those following along, our new test class should look something like this:
                     .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
                     .addAsWebInfResource("arquillian-ds.xml")
                     .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
-
-            //System.out.println(war.toString(true)); //Just a test to see if everything is packaged correctly
 
             return war;
         }
