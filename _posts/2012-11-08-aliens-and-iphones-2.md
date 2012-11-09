@@ -144,5 +144,7 @@ Here is my forked repo: [Drone Branch](https://github.com/lholmquist/as-quicksta
 
 Testing on Mobile.... I Promise
 
+[Beam Me Up Scotty... To the Next Post]({{ BASE_PATH }}{{ page.next.url }})
+
 
 ![lolcat](http://i.chzbgr.com/completestore/2009/8/6/128940682356485244.jpg)
