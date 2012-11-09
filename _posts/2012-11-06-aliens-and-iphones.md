@@ -113,7 +113,7 @@ First, make sure in the *dependecyManangment* section we have this as our first 
         <scope>import</scope>
     </dependency>
 
-*Note: the version should be 1.0.2.Final and it should be specified in the *properties*
+*Note: the version should be 1.0.2.Final and it should be specified in the properties*
 
 
 Now, there should be some Arquillian dependencies already in this file,  find them and put this under them:
@@ -181,7 +181,9 @@ Here is my forked repo: [Drone Branch](https://github.com/lholmquist/as-quicksta
 
 ## Next Up
 
-Now that we have a working test on Firefox,  lets try getting it to work on some other browsers, then a Mobile Browser( since that was the point of this post).
+Now that we have a working test on Firefox,  lets try to automate it and submit something, then a Mobile Browser( since that was the point of this post).
 
+
+[Beam Me Up Scotty... To the Next Post]({{ BASE_PATH }}{{ page.next.url }})
 
 ![lolcat](http://cdn.uproxx.com/wp-content/uploads/2012/04/lolcat-battlemech-alien2-uproxx3.jpg)
