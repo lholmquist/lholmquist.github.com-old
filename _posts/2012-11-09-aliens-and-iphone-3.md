@@ -187,6 +187,7 @@ Here is my forked repo: [Drone Branch](https://github.com/lholmquist/as-quicksta
 With Android out of the way, it's time to move on to iOS.  This was just released a few weeks ago,  so it's time to dive in.
 
 
+[Beam Me Up Scotty... To the Next Post]({{ BASE_PATH }}{{ page.next.url }})
 
 
 ![lolcat](http://2.bp.blogspot.com/-VFGdGM3CuCE/TcjIIwMpHsI/AAAAAAAAM9A/U8OMiN4TSM4/s1600/funny-pictures-halp-alien-tentickles.jpg)
