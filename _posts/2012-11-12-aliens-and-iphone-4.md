@@ -7,6 +7,7 @@ categories: [mobile, testing]
 tags: [Arquillian, JBoss, iOS]
 published: true
 ---
+{% include JB/setup %}
 
 ## Last Time
 
@@ -101,6 +102,8 @@ Here is my forked repo: [Drone Branch](https://github.com/lholmquist/as-quicksta
 
 Well what about actually testing on the device itself.
 
+
+[Beam Me Up Scotty... To the Next Post]({{ BASE_PATH }}{{ page.next.url }})
 
 ![lolcat](http://i.chzbgr.com/completestore/2008/5/7/aliencatexits128546748960791250.jpg)
 
