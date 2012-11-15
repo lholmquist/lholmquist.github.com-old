@@ -146,6 +146,8 @@ With Mobile Web and Hybrid Down,  It's time to start some endgame content. And b
 
 [Fork the Source](https://github.com/lholmquist/WoWAerogear-cordova)
 
+[Accept Summon to Next Post](/Personal/Aerogear/2012/11/14/wow-areogear-ios/)
+
 *i know this isn't a cat but the internetz is running out of WoW related lolcats*
 
 ![](http://i.chzbgr.com/completestore/2009/2/19/128795107405299186.jpg)
