@@ -57,4 +57,6 @@ As some one told me, [@abstractj](https://twitter.com/abstractj), defining api's
 
 I know,  exciting............stay tuned
 
+[Next Post](/Aerogear/JBoss/Ideas/Personal/2012/11/22/start-over-2/)
+
 ![lolcat](https://i.chzbgr.com/completestore/12/10/1/RVrGhFs-8EuRiLku_KD9pw2.jpg)
