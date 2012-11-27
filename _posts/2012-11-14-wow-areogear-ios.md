@@ -107,6 +107,7 @@ At this point, we aren't doing thing with the data.  Next time we will display t
 
 The code is still in progress, but here is the [repo](https://github.com/lholmquist/WoWAerogeariOS) _be warned,  i'm a novice iOS brogrammer_
 
+[Accept Summon to Next Post]({{ BASE_PATH }}{{ page.next.url }})
 
 ![lolcat](http://4.bp.blogspot.com/_2qbnJJTuUtQ/TKruMlPTznI/AAAAAAAAAjM/FV_AHax_WRs/s1600/lolcatWow.jpg)
 
