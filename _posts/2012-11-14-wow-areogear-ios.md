@@ -26,6 +26,8 @@ _since we are creating an iOS version, we are going to need a Mac running 10.7+ 
 I also recommend this [great tutorial](http://aerogear.org/docs/guides/GetStartedwithAeroGearandXcode/) .
 _
 
+_you can also checkout the Android version [here](/Personal/Aerogear/2012/11/29/wow-aerogear-android/)_
+
 ##Character Select Screen
 
 Time to create our new character.  First we need to open xcode and create a new project.  I selected a "Single View Application".  This might turn out to be a bad idea,  but i'm writing this while coding, so we'll see.
