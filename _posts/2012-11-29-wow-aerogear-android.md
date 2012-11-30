@@ -152,7 +152,7 @@ So now we can just get that Realm List and put it in the realmList variable that
 
 ##Next Time
 
-Possibly finishing up to show the detail views.
+Possibly finishing up to show the detail views.  Maybe
 
 Also checkout the [iOS version](/Personal/Aerogear/2012/11/14/wow-areogear-ios/)
 
