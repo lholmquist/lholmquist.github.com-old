@@ -100,6 +100,10 @@ Now, when we use our aerogear pipe, we get the same as the jQuery one:
 
 Now that we have something that works, we send these idea's to the Aerogear-Dev Mailing List to get feedback so it will become part of Aerogear.js
 
+## UPDATE - 12/11/12
+
+Cross Domain Support is now official in Aerogear.js.[learn more](/Personal/Aerogear/2012/12/11/cross-domain/)  So basically everything you just read above is some what obsolete.
+
 
 ## Up Next:
 
