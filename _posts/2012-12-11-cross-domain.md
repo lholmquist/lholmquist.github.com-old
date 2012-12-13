@@ -67,4 +67,10 @@ But, what if you want to not use a randomly generated call back name, and instea
 
 So yea,  pretty simple.  Again, if your server isn't setup for this kind of thing, then it won't really work
 
+## Up Next:
+
+Creating the server
+
+[Accept Summon to Next Post]({{ BASE_PATH }}{{ page.next.url }})
+
 ![lolcat](http://iliketowastemytime.com/sites/default/files/funny_cats_lol_cats_sup_bro.jpg)
