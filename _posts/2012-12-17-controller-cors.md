@@ -114,7 +114,7 @@ Ok,  that should fix that part,  but we still need to add one more thing.
 
 Open up the Routes.java file and look for:
 
-    .form("/cars").on(RequestMethod.POST)
+    .from("/cars").on(RequestMethod.POST)
 
 This example is only going to deal with GET requests,  there is a JIRA for POST so stay tuned, so we will need to add a route:
 
