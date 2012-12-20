@@ -12,7 +12,7 @@ group: wowaerogear
 
 ## Intro
 
-This week marks another milestone release for the [AeroGear project with 1.0.0.M7](http://aerogear.org).
+This week marks another milestone release for the [AeroGear project with 1.0.0.M7](http://aerogear.org/news/2012/12/20/aerogear-1.0.0.M7-is-out/index.html).
 
 Let's take a quick look at how we can now interact with AeroGear Controller by using AeroGear.js
 
