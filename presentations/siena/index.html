@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Aerogear - Siena Version</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    <h1>Intro To Mobile</h1>
+                    <div>Open-Source Libraries&nbsp;</div>
+                    <div>for&nbsp;</div>
+                    <div>Mobile App Development</div>
+                    <div>
+                        <br>
+                    </div>
+                </section>
+                <section>
+                    <h2>Who Am I ?</h2>
+                    <div style="">
+                        <ul>
+                            <li>Luke Holmquist</li>
+                            <li>JBoss by Red Hat(Sr. Software Engineer)</li>
+                            <li>Aerogear</li>
+                            <li>Siena Class of 2002</li>
+                            <li>Blog: <a href="http://blog.lholmquist.org">blog.lholmquist.org</a></li>
+                            <li>Twitter: <a href="http://twitter.com/sienaluke">@Sienaluke</a>
+                           </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                        <h2>Why are we here?</h2>
+                        <div style="text-align:left;margin-left:8.5em">
+                        <div>Mobile Web</div>
+                        <div>Mobile App Development</div>
+                        <div>HTML5 + REST</div>
+                        <div>Hybrid</div>
+                        <div>JBoss + Openshift</div>
+                        <div>AeroGear Framework</div>
+                        <div>
+                            <br>
+                        </div>
+                    </div>
+                        <aside class="notes">
+                        </aside>
+                </section>
+                <section>
+                    <section>
+                        <h2>Mobile Web - Background</h2>
+                        <div>Well, There isn't one really</div>
+                        <div class="fragment">
+                            <img src="../lib/pics/02-650x487.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Growth</h2>
+                        <div>Holy Crap!</div>
+                        <div>
+                            <img src="../lib/pics/Mobile-Web-Usage-Growth.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Problems</h2>
+                        <div>
+                            <ul>
+                                <li>Various/Small Screen Sizes</li>
+                                <img src="../lib/pics/gsmarena_002.jpg">
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Problems</h2>
+                        <div>
+                            <ul>
+                                <li>Different Feature Sets</li>
+                                <img src="../lib/pics/features.png">
+                            </ul>
+                        </div>
+                        <a href="http://caniuse.com">caniuse.com</a>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Solutions</h2>
+                        <ul>
+                            <li>Mobile First Thinking</li>
+                            <img src="../lib/pics/mobilefirst.png">
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Solutions</h2>
+                        <ul>
+                            <li>Responsive/Adaptive Web Design
+                            <ul>
+                                <li>Bootstrap</li>
+                                <li>CSS 3 Media Queries</li>
+                            </ul>
+                            <pre><code contenteditable>
+@media screen and (max-width: 800px) {
+.logo {
+    margin-top: 1px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    margin-top: 30px;
+    }
+}
+                            </code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Solutions</h2>
+                        <ul>
+                            <li>Feature Detection
+                            <ul>
+                                <li>Modernizr</li>
+                                <li>User Agent Testing is Dead!!!</li>
+                                <pre><code contenteditable>
+Modernizr.load({
+  test: Modernizr.geolocation,
+  yep : 'geo.js',
+  nope: 'geo-polyfill.js'
+}); </code></pre>
+                            </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mobile Web</h2>
+                        <div>
+                            Demo
+                        </div>
+                        <aside class="notes">
+                            Need a demo that shows responsive design in action
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <h2>Mobile Apps</h2>
+                    <div>
+                            <img src="../lib/pics/mobiles.png">
+                            <br>
+                        </div>
+                    <aside class="notes">
+                        Go over the differnent ways to create mobile
+                    </aside>
+                </section>
+                <section>
+                    <section>
+                    <h2>Mobile Web Apps</h2>
+                        <ul>
+                            <li>Mobile Web Pages</li>
+                            <li>Styled as Native
+                                <ul>
+                                    <li>jQuery Mobile</li>
+                                    <li>Ratchet</li>
+                                </ul>
+                            </li>
+                            <li>Add to home screen - iOS</li>
+                        </ul>
+                        <pre><code>&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href=".."&gt;</code></pre>
+                    </section>
+                    <section>
+                        <h2>Mobile Web Apps</h2>
+                        <div>
+                            Best Practices
+                        </div>
+                        <br>
+                        <ul>
+                            <li>Single Page</li>
+                            <li>Optimize Scripts</li>
+                            <li>Limit HTTP Requests</li>
+                            <li>Focus Your Content</li>
+                            <li>HTML5 + REST</li>
+                        </ul>
+                    </section>
+                    <!--<section>
+                        <h2>Mobile Web Apps</h2>
+                        <div>
+                            Demo
+                        </div>
+                        <aside class="notes">
+                            need a good mobile web app demo
+                        </aside>
+                    </section>-->
+                </section>
+                <section>
+                   <section>
+                    <h2>&nbsp;</h2>
+                    <h2>What do you</h2>
+                    <h2>mean with</h2>
+                    <h1>HTML5 + REST ?</h1>
+                    </section>
+                    <section>
+                    <h2>The Mythical “HTML5”</h2>
+                    <ul>
+                        <li>W3C Suite of Specifications</li>
+                            <ul>
+                                <li>Canvas</li>
+                                <li>Geolocation</li>
+                                <li>WebSockets</li>
+                                <li>SSE (Server-Sent Events)</li>
+                                <li>CSS3</li>
+                                <li>WebWorker</li>
+                                <li>Web Storage</li>
+                            </ul>
+                        <li>and some JavaScript APIs</li>
+                    </ul>
+                    <img style="background:white" src="../lib/pics/HTML5_Logo_256.png" alt="" />
+                </section>
+
+                    <section>
+                    <h2>JAX-RS RESTFul Endpoints</h2>
+                    <ul>
+                        <li>Uses HTTP standards</li>
+                        <li>GET, POST, UPDATE, DELETE, etc...</li>
+                        <li>Returns <span style="text-decoration: line-through;">XML</span>, JSON content</li>
+                        <li>Annotate Class Methods for request mapping</li>
+                        <pre><code contenteditable>@Path("/members")
+public class SomeMemberService {
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List&lt;Member&gt; getAllMembers(){ .... }
+}
+</code></pre>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>REST...</h2>
+                    <li>Uses meaningful response codes</li>
+                    <ul>
+                        <li>200 OK</li>
+                        <li>201 Created</li>
+                        <li>400 Bad Request</li>
+                        <li>404 Not Found</li>
+                        <li>409 Conflict</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>AeroGear’s Mobile Web QuickStart</h2>
+                       <p><i>The HTML5 + REST example:</i></p>
+                        <ul>
+                            <li>single page app</li>
+                            <li>jQuery / jQuery mobile</li>
+                            <li>JavaEE</li>
+                                <ul>
+                                    <li>JAX-RS Endpoints</li>
+                                    <!--<li>CDI Beans and Services</li>-->
+                                </ul>
+                            <li><a href="http://html5-aerogear.rhcloud.com/">http://html5-aerogear.rhcloud.com/</a></li>
+                        </ul>
+                </section>
+                    <!--<section>
+                        <h2>Concerns</h2>
+                        <div>
+                            <br>
+                        </div>
+                        <div>how to connect easily</div>
+                        <div>security</div>
+                        <div>datamanagement</div>
+                        <div>
+                            <br>
+                        </div>
+                    </section>-->
+                </section>
+                <section>
+                    <section>
+                        <h2>Debugging Web Apps</h2>
+                        <br>
+                        <div>
+                            <ul>
+                                <li>Chrome Dev Tools</li>
+                                <li>Safari Web Inspector</li>
+                                <li>Fire Bug</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div>What about Mobile?</div>
+                    </section>
+                    <section>
+                        <h2>Debugging Mobile Web Apps</h2>
+                        <div>6 Months Ago</div>
+                        <div class="fragment">
+                            <img src="../lib/pics/9debf6f4_fuuuu-rage-guy1.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Debugging Mobile Web Apps</h2>
+                        <div>WEINRE</div>
+                        <div>
+                            <img src="../lib/pics/weinre-demo.jpeg">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 style="">DEBUGGING MOBILE WEB APPS</h2>
+                        <h6>
+                            <font face="Lato, Times, Times New Roman, serif">
+                                <span style="font-size: 36.0px;letter-spacing: normal;line-height: 43.2px;ttransform: none;">                    Today</span>
+                            </font>
+                        </h6>
+                        <h6>
+                            <img src="../lib/pics/happy-smile-l.png">
+                            <font face="Lato, Times, Times New Roman, serif">
+                                <span style="font-size: 36.0px;letter-spacing: normal;line-height: 43.2px;ttransform: none;">
+                                    <br>
+                                </span>
+                            </font>
+                        </h6>
+                    </section>
+                    <section>
+                        <h2>DEbugging Mobile WEb Apps</h2>
+                        <div>iOS 6</div>
+                        <div>
+                            <img src="../lib/pics/debugger1.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Debugging Mobile Web apps</h2>
+                        <div>iOS 6</div>
+                        <div>
+                            <img src="../lib/pics/debugger2.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Debugging Mobile WEb Apps</h2>
+                        <div>Chrome for Android(4.0+)</div>
+                        <div>
+                            <img src="../lib/pics/webDebugMenu.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Debugging mobile web apps</h2>
+                        <div>Chrome for Android(4.0+)</div>
+                        <div>
+                            <img src="../lib/pics/Desktop2.png">
+                            <br>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Debugging mobile web apps</h2>
+                        <div>Demo</div>
+                    </section>
+                </section>
+                <section>
+                 <section>
+                        <h2>Going Native</h2>
+                        <div>
+                            <img src="../lib/pics/avatar_hybrid.jpg">
+                        </div>
+                        <div>as hybrid</div>
+                        <aside class="notes">
+                            ask if anyone has heard of cordova/phonegap
+                            .......
+                            take existing web development skills and put them on a device, but get access to some native features, like camera, battery, etc...
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Apache Cordova</h2>
+                        <h3>aka - PhoneGap</h3>
+                        <ul>
+                            <li>embedded browser in native app</li>
+                        <li>bridge between browser and native</li>
+                        <li>DEV => writes web app</li>
+                        <li>packages web app with the native code</li>
+                        <li>no device specific compile </li>
+                        <li>PLUGINS: between layers!</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Apache Cordova</h2>
+                        <div>Demo</div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Aerogear</h2>
+                        <div class="fragment">
+                        <h3>The Gear your looking for</h3>
+                            <img src="../lib/pics/gear_looking_for.jpg">
+                            <br>
+                        </div>
+                        <aside class="notes">
+                            Tying it all together
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Aerogear</h2>
+                        <div>
+                            <img src="../lib/pics/aerogear-splash.png">
+                            <br>
+                        </div>
+                        <aside class="notes">
+                            Tying it all together
+                        </aside>
+                    </section>
+                    <section>
+                    <h2>AeroGear</h2>
+                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <ul>
+                        <li>JBoss community project</li>
+                        <li>Dedicated to mobile development</li>
+                        <ul>
+                            <li>HTML5 <i>and</i> native</li>
+                        </ul>
+                        <li>Facilitate all types of mobile</li>
+                        <ul>
+                            <li>Mobile Web</li>
+                            <li>Hybrid</li>
+                            <li>Native mobile</li>
+                        </ul>
+                        <li>Examples, tutorials, & community</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>AeroGear</h2>
+                       <p>current offerings:</p>
+                        <ul>
+                            <li><span style="text-decoration: underline;"><b><i>AeroGear.js</i></b></span></li>
+                            <li>AeroGear-iOS</li>
+                            <li>AeroGear.jar (Android)</li>
+                        </ul>
+                        <p>&nbsp;</p>
+                        <ul>
+                            <li>server components:</li>
+                            <ul>
+                                <li>aerogear-controller</li>
+                                <li>aerogear-security</li>
+                            </ul>
+                        </ul>
+                </section>
+
+
+                <section>
+                    <h2>AeroGear.js</h2>
+                    <ul>
+                        <li>internal usage of jQuery ($.ajax and $.extend)</li>
+                        <li>Example:</li>
+                    </ul>
+                    <pre><code>// create an empty pipeline:&#x000A;var myPipeline = AeroGear.Pipeline();&#x000A;&#x000A;// Add a connection/pipe object:&#x000A;myPipeline.add("projects");&#x000A;&#x000A;// Reading data from the 'myprojects' connection: &#x000A;myPipeline.pipes['projects'].read();&#x000A;
+                    </pre></code>
+                </section>
+                <section>
+                    <h2>AeroGear.js</h2>
+                    <ul>
+                        <li>Data Manager</li>
+                        <li>Example:</li>
+                    </ul>
+                    <pre><code>// create an empty DataManager:&#x000A;var myDataManager = AeroGear.DataManager();&#x000A;&#x000A;// Add a store object:&#x000A;myDataManager.add("projects");&#x000A;&#x000A;// Reading data from the 'myDataManager' store: &#x000A;myDataManager.stores['projects'].read();&#x000A;
+                    </pre></code>
+                </section>
+                <section>
+                    <h2>AeroGear.next</h2>
+                        <ol>
+                            <li>More transports (e.g. WebSocket)</li>
+                            <li>Data Sync and Push notifications</li>
+                            <li>OData?</li>
+                            <li>More platforms ?</li>
+                        </ol>
+                        <p>&nbsp;</p>
+                        <h3>grow the community</h3>
+                    </section>
+                    <section>
+                        <h2>aerogear.js</h2>
+                        <div>Demo</div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>How to Run</h2>
+                        <div>Option 1:</div>
+                        <img src="../lib/pics/AS7.png"/>
+                    </section>
+                     <section>
+                        <h2>How to Run</h2>
+                        <div>Option 2:</div>
+                        <img src="../lib/pics/OpenShift-Logo.png"/>
+                    </section>
+                    <section>
+                        <h2>Quickstarts</h2>
+                        <div>JBoss Developer Framework</div>
+
+                        <a href="http://www.jboss.org/jdf">http://www.jboss.org/jdf</a>
+                        <br>
+                            <ul>
+                                <li>Maven</li>
+                                <li>Github</li>
+                            </ul>
+                    </section>
+                    <aside class="notes">http://www.jboss.org/jdf/quickstarts/get-started/</aside>
+                </section>
+                <section>
+                    <h2>Questions?</h2>
+                    <img src="../lib/pics/philosoraptor.jpg" />
+                    <div><a href="http://aerogear.org">Aerogear.org</a></div>
+                    <div><a href="http://github.com/aerogear">github.com/aerogear</a></div>
+                </section>
+                <section>
+                    <h2>Helpful Links</h2>
+                    <div><a href="http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/">Baseline For Front End Devs</a></div>
+                    <div><a href="http://addyosmani.github.com/todomvc/">TODO MVC</a></div>
+                    <div><a href="http://cubiq.org/">Cubiq.org</a></div>
+                    <div><a href="http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW3">Safari Web Application</a></div>
+                    <div><a href="http://www.html5rocks.com/">Html5Rocks</a></div>
+                    <div><a href="http://html5please.com/">Html5Please</a></div>
+                    <div><a href="http://modernizr.com/">Modernizr.com</a></div>
+                    <div><a href="http://twitter.github.com/bootstrap/">Bootstrap</a></div>
+                    <div><a href="http://jquerymobile.com/">jQuery Mobile</a></div>
+                    <div><a href="http://aerogear.org">Aerogear.org</a></div>
+                    <div><a href="http://github.com/aerogear">github.com/aerogear</a></div>
+                </section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

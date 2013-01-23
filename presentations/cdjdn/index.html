@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Aerogear - CDJDN Version</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/override.css">
+		<link rel="stylesheet" href="../css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    <h1>AeroGear</h1>
+                    <div>New Mobile Development Platform</div>
+                </section>
+                <section>
+                    <h2>Who Am I ?</h2>
+                    <div style="">
+                        <ul>
+                            <li>Luke Holmquist</li>
+                            <li>JBoss by Red Hat(Sr. Software Engineer)</li>
+                            <li>Aerogear</li>
+                            <li>Blog: <a href="http://lholmquist.org">lholmquist.org</a></li>
+                            <li>Twitter: <a href="http://twitter.com/sienaluke">@Sienaluke</a>
+                           </li>
+                        </ul>
+                    </div>
+                </section>
+<!--                <section>
+                    <h2>Why are we here?</h2>
+                    <div style="text-align:left;margin-left:8.5em">
+                        <div>Mobile</div>
+                        <div>AeroGear Framework</div>
+                    </div>
+                    <aside class="notes"></aside>
+                </section>-->
+                <section>
+                    <h2>The Past</h2>
+                    <img src="../lib/pics/kitty-surfing.jpg">
+                </section>
+                <section>
+                    <h2>This was Mobile</h2>
+                    <img src="../lib/pics/zac_morris_phone.jpg">
+                </section>
+                <section>
+                    <h2>But Now...</h2>
+                    <img src="../lib/pics/new_phones.jpg">
+                </section>
+                <section>
+                    <h2>And Guess What...</h2>
+                    <img src="../lib/pics/pc_smartphone_sales.jpg">
+                </section>
+                <section>
+                    <h2>And the Web...</h2>
+                    <img src="../lib/pics/03-650x487.png">
+                </section>
+                <section>
+                    <h2>New Challenges</h2>
+                    <img src="../lib/pics/angry-old-man-with-computer.jpg">
+                </section>
+                <section>
+                    <h2>Current Stack</h2>
+                    <img style="max-width:none; max-height:none" src="../lib/pics/feature_aerogear_large.png">
+                    <aside class="notes">stack shift</aside>
+                </section>
+                <section>
+                    <h2>Connectivity</h2>
+                    <ul>
+                        <li>Carrier Networks</li>
+                        <li>Data Plans</li>
+                        <li>Cross Domain</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/dat-internet-connection_o_802546.jpg">
+                </section>
+                <section>
+                    <h2>Persistence</h2>
+                    <ul>
+                        <li>Device Storage</li>
+                        <li>Offline</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/mobile_storage.jpeg">
+                </section>
+                <section>
+                    <h2>Security</h2>
+                    <ul>
+                        <li>Security is Hard</li>
+                        <li>Secure Data on a Device</li>
+                        <li>Lost Phone</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/you-shall-not-pass-meme.jpg">
+                </section>
+                <section>
+                    <h2>Aerogear</h2>
+                    <div>
+                        <img src="../lib/pics/aerogear-splash.png">
+                        <br>
+                    </div>
+                    <aside class="notes">
+                        Tying it all together
+                    </aside>
+                </section>
+                <section>
+                    <h2>AeroGear</h2>
+                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <ul>
+                        <li>JBoss community project</li>
+                        <li>Dedicated to mobile development</li>
+                        <ul>
+                            <li>HTML5 <i>and</i> native</li>
+                        </ul>
+                        <li>Facilitate all types of mobile</li>
+                        <li>Common API</li>
+                        <ul>
+                            <li>Mobile Web</li>
+                            <li>Hybrid</li>
+                            <li>Native mobile</li>
+                        </ul>
+                        <li>Examples, tutorials, & community</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Current Client Offerings</h2>
+                        <ul>
+                            <li>AeroGear.js</li>
+                            <li>AeroGear-iOS</li>
+                            <li>AeroGear.jar (Android)</li>
+                        </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Core Client Concepts</h2>
+                    <ul>
+                        <li>Pipeline</li>
+                        <li>Data Manager</li>
+                        <li>Authenticator</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>What is a pipeline?</h2>
+                    <ul>
+                        <li>Collection of Server Connections( Pipes )</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var pipeline = AeroGear.Pipeline();
+                    </code></pre>
+                    <pre><code>
+// iOS
+AGPipeline* pipeline = [AGPipeline pipeline:projectsURL];
+                    </code></pre>
+                    <pre><code>
+// Android
+pipeline = new Pipeline(baseURL);
+                    </code></pre>
+                </section>
+                <section>
+                <section>
+                    <h2>What is a pipe?</h2>
+                    <ul>
+                        <li>Server Connection</li>
+                        <li>Read/Save/Remove</li>
+                        <li>Async Callbacks</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var myPipe = pipeline.add({
+    name: "myPipe",
+    config: {
+        baseURL: "customBaseURL"
+        endPoint: "customEndpoint"
+    }
+}).pipes.myPipe;
+
+myPipe.read( ... );
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>What is a pipe?</h2>
+                    <pre><code>
+// iOS
+_myPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
+                [config name:@"myPipe"];
+                [config endpoint:@"customEndpoint"];
+            }];
+
+[_myPipe read: ... ];
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>What is a pipe?</h2>
+                    <pre><code>
+// Android
+private Pipe<POJOReturn> myPipe;
+.......
+PipeConfig pipeConfig = new PipeConfig(baseURL, POJO.class);
+pipeConfig.setName("myPipe");
+pipeConfig.setEndpoint("customEndpoint");
+
+pipeline.pipe(POJOReturn.class, pipeConfig);
+
+myPipe = pipeline.get("myPipe");
+
+myPipe.read( ... )
+                    </code></pre>
+                </section>
+            </section>
+                <section>
+                    <h1>Demo</h1>
+                </section>
+                <section>
+                    <h2>What is a datamanager?</h2>
+                    <ul>
+                        <li>Collection of Stores</li>
+                    </ul>
+                     <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var dataManager = AeroGear.DataManager();
+                    </code></pre>
+                    <pre><code>
+// iOS
+AGDataManager* dm = [AGDataManager manager];
+                    </code></pre>
+                    <pre><code>
+// Android
+pipeline = new Pipeline(baseURL);
+                    </code></pre>
+                </section>
+                <section>
+                <section>
+                    <h2>What is a store?</h2>
+                    <ul>
+                        <li>client side storage API</li>
+                        <li>Read/Save/Remove/Filter</li>
+                        <li>Sync Manager( coming soon )</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                     <pre><code>
+// Javascript
+datamanager.add( "projects" );
+
+var projectStore = datamanger[ "projects" ];
+
+projectStore.read( ... );
+                        </code></pre>
+                </section>
+                <section>
+                    <h2>What is a store?</h2>
+                    <pre><code>
+// iOS
+id<AGStore> myStore = [dm store:^(id<AGStoreConfig> config) {
+    [config setName:@"tasks"];
+}]; 
+
+[myStore read: ... ];
+
+</code></pre>
+</section>
+               <section>
+                  <h2>What is a store?</h2>
+                    <pre><code>
+// Android
+Store<SomeObject> myStore = dataManager.store("myStore");
+
+myStore.read( ... );
+
+</code></pre>
+                </section>
+            </section>
+                <section>
+                    <h1>Demo</h1>
+                </section>
+                <section>
+                    <h2>What is an authenticator?</h2>
+                    <ul>
+                        <li>Collection of Authentication Modules</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var auth = AeroGear.Auth();
+                    </code></pre>
+                    <pre><code>
+// iOS
+AGAuthenticator* authenticator = [AGAuthenticator authenticator];
+                    </code></pre>
+                    <pre><code>
+// Android
+Authenticator authenticator = new DefaultAuthenticator();
+                    </code></pre>
+                </section>
+               <section>
+                <section>
+                    <h2>What is an auth module?</h2>
+                    <ul>
+                        <li>Authentication and Enrollment API</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+auth.add(
+    {
+        name: "myAuth",
+        settings: {
+            agAuth: true,
+            baseURL: "/todo-server/"
+        }
+    }
+);
+
+auth.modules['myAuth'].login( ... );
+</code></pre>
+                </section>
+                <section>
+                    <h2>What is an auth module?</h2>
+                    <pre><code>
+// iOS
+_restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
+            [config name:@"restAuthMod"];
+            [config baseURL:projectsURL];
+        }];
+
+[_restAuthModule login ... ]
+        </code></pre>
+                </section>
+                <section>
+                    <h2>What is an auth module?</h2>
+                    <pre><code>
+// Android
+Authenticationmodule authMod =
+        Authenticator.auth(AuthType.REST, baseURL).add();
+
+authModule.login( ... );
+</code></pre>
+                </section>
+                </section>
+            </section>
+                <section>
+                    <h1>Demo</h1>
+                </section>
+                <section>
+                    <h2>Current Server Offerings</h2>
+                        <ul>
+                            <li>AeroGear Security</li>
+                            <li>AeroGear Controller</li>
+                        </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Very Lean Security API</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Pluggable Security Providers</li>
+                    </ul>
+                    picketbox
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Authentication</li>
+                    </ul>
+                    <pre><code>
+@Stateless
+public class Login {
+
+    @Inject
+    private AuthenticationManager authenticationManager;
+
+    public AeroGearUser login(AeroGearUser user) {
+
+        authenticationManager.login(user);
+
+        return user;
+    }
+
+    public void logout() {
+        authenticationManager.logout();
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Registration</li>
+                    </ul>
+                    <pre><code>
+@Stateless
+public class Register {
+
+    //For example purposes only
+    public static final String DEFAULT_ROLE = "admin";
+
+    @Inject
+    private IdentityManagement configuration;
+
+    public AeroGearUser register(AeroGearUser user) {
+        configuration.create(user);
+        configuration.grant(DEFAULT_ROLE).to(user);
+        return user;
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>REST Flavor</li>
+                        <li>A La Carte( coming soon )</li>
+                    </ul>
+                    <pre><code>
+// To Register
+host/myapp/auth/enroll
+
+// To Login
+host/myapp/auth/login
+
+// To Logout
+host/myapp/auth/logout
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Security - OTP</h2>
+                    <ul>
+                        <li>One Time Password API</li>
+                        <li>Google Authenticator Compatible</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Server Hooks For Client Libraries</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Light weight MVC</li>
+                        <li>Java Driven... NO XML</li>
+                        <li>Fluent API</li>
+                    </ul>
+                     <pre><code>
+route()
+    .from("/")
+    .on(RequestMethod.GET)
+    .to(Home.class).index();
+            </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Beans as Controller Params</li>
+                    </ul>
+                     <pre><code>
+public class Store {
+    public Car save(Car car) {
+        return car;
+    }
+}
+
+route()
+    .from("/cars")
+    .on(RequestMethod.POST)
+    .to(Store.class).save(param(Car.class));
+
+
+//A simple html form
+&lt;input type="text" name="car.color"/&gt;
+&lt;input type="text" name="car.brand"/&gt;
+            </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>AeroGear Security Hook</li>
+                    </ul>
+                     <pre><code>
+.route()
+    .from("/login")
+    .on(RequestMethod.POST)
+    .to(Login.class).login(param(AeroGearUser.class));
+                         </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Fine Grained Security</li>
+                    </ul>
+                     <pre><code>
+.route()
+    .from("/delorean").roles("admin", "developer")
+    .on(RequestMethod.GET)
+    .to(Home.class).anotherPage();
+                         </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Consume and Produce</li>
+                    </ul>
+                     <pre><code>
+route()
+    .from("/cars")
+    .on(RequestMethod.POST)
+    .consumes(MediaType.JSON.getMediaType(),
+              MediaType.HTML.getMediaType())
+    .produces(MediaType.JSON, MediaType.JSP,
+              CustomMediaTypeResponder.MEDIA_TYPE)
+    .to(Home.class).save(param(Car.class));
+                         </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Pretty Error Handlers</li>
+                    </ul>
+                     <pre><code>
+route()
+    .on(YourException.class)
+    .to(ExceptionHandler.class).errorPage();
+            </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>CORS Support</li>
+                    </ul>
+                     <pre><code>
+@Produces
+public CorsConfiguration demoConfig() {
+    return CorsConfig.enableCorsSupport()
+        .anyOrigin()
+        .enableCookies()
+        .exposeHeaders("header1")
+        .maxAge(20)
+        .enableAllRequestMethods()
+        .validRequestHeaders("header1");
+}
+
+....
+
+@Produces
+    public CorsConfiguration demoConfig() {
+        return CorsConfig.disableCorsSupport();
+    }
+ </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear.next</h2>
+                        <ul>
+                            <li>More transports (e.g. WebSocket)</li>
+                            <li>Data Sync and Push notifications</li>
+                            <li>OData?</li>
+                            <li>More platforms</li>
+                            <li>Cordova Plugins?</li>
+                        </ul>
+                        <p>&nbsp;</p>
+                        <h3>grow the community</h3>
+                </section>
+                <section>
+                    How do i get the stuff
+                </section>
+                <!-- CDJDN STUFF -->
+               <!-- <section>
+                    FOrge stuff
+                    create a new project
+                    add cdi
+                    jpa
+                    add an entity
+                    add rest
+                    add an endpoint
+                    add a scaffold
+                    explain how we are working towards a aerogear plugin
+                </section>
+                <section>
+                    arquillain part
+                    what is arquillian
+                    regular example first
+                    browser example next
+                    mobile sim next
+                    device last
+                </section>
+                <section>
+                    learn more stuff
+                    <h2>Quickstarts</h2>
+                        <div>JBoss Developer Framework</div>
+
+                        <a href="http://www.jboss.org/jdf">http://www.jboss.org/jdf</a>
+                        <br>
+                            <ul>
+                                <li>Maven</li>
+                                <li>Github</li>
+                            </ul>
+                </section>-->
+                <section>
+                    <h2>Questions?</h2>
+                    <img src="../lib/pics/philosoraptor.jpg" />
+                    <div><a href="http://aerogear.org">Aerogear.org</a></div>
+                    <div><a href="http://github.com/aerogear">github.com/aerogear</a></div>
+                </section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
