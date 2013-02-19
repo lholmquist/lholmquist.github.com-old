@@ -13,7 +13,7 @@
 
         <link rel="stylesheet" href="../css/main.css">
 		<link rel="stylesheet" href="../css/override.css">
-		<link rel="stylesheet" href="../css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../lib/css/zenburn.css">
@@ -72,6 +72,10 @@
                     <img src="../lib/pics/new_phones.jpg">
                 </section>
                 <section>
+                    <h2>Then This Happened...</h2>
+                    <img src="../lib/pics/promo_split_hero.jpg" >
+                </section>
+                <section>
                     <h2>And Guess What...</h2>
                     <img src="../lib/pics/pc_smartphone_sales.jpg">
                 </section>
@@ -114,8 +118,7 @@
                         <li>Secure Data on a Device</li>
                         <li>Lost Phone</li>
                     </ul>
-                    <div>&nbsp;</div>
-                    <img src="../lib/pics/you-shall-not-pass-meme.jpg">
+                    <div><img src="../lib/pics/you-shall-not-pass-meme.jpg"></div>
                 </section>
                 <section>
                     <h2>Aerogear</h2>
@@ -192,6 +195,8 @@ pipeline = new Pipeline(baseURL);
                     <div>&nbsp;</div>
                     <pre><code>
 // Javascript
+var simplePipe = pipeline.add( "simplePipe" ).pipes.simplePipe;
+
 var myPipe = pipeline.add({
     name: "myPipe",
     config: {
@@ -252,7 +257,7 @@ AGDataManager* dm = [AGDataManager manager];
                     </code></pre>
                     <pre><code>
 // Android
-pipeline = new Pipeline(baseURL);
+DataManager dataManager = new DataManager();
                     </code></pre>
                 </section>
                 <section>
@@ -271,6 +276,15 @@ datamanager.add( "projects" );
 var projectStore = datamanger[ "projects" ];
 
 projectStore.read( ... );
+
+datamanager.add({
+    name: "sessionStore",
+    type: "SessionLocal"
+});
+
+var sessionstore = datamanager.stores.sessionStore;
+
+sessionstore.read( ... );
                         </code></pre>
                 </section>
                 <section>
@@ -311,11 +325,11 @@ var auth = AeroGear.Auth();
                     </code></pre>
                     <pre><code>
 // iOS
-AGAuthenticator* authenticator = [AGAuthenticator authenticator];
+AGAuthenticator* auth = [AGAuthenticator authenticator];
                     </code></pre>
                     <pre><code>
 // Android
-Authenticator authenticator = new DefaultAuthenticator();
+Authenticator auth = new DefaultAuthenticator();
                     </code></pre>
                 </section>
                <section>
@@ -385,7 +399,7 @@ authModule.login( ... );
                     <ul>
                         <li>Pluggable Security Providers</li>
                     </ul>
-                    picketbox
+                    <img src="../lib/pics/desktop_picketlink_640x480.jpg">
                 </section>
                 <section>
                     <h2>AeroGear Security</h2>
@@ -452,13 +466,13 @@ host/myapp/auth/login
 host/myapp/auth/logout
                     </code></pre>
                 </section>
-                <section>
+               <!--<section>
                     <h2>AeroGear Security - OTP</h2>
                     <ul>
                         <li>One Time Password API</li>
                         <li>Google Authenticator Compatible</li>
                     </ul>
-                </section>
+                </section>-->
                 <section>
                     <h2>AeroGear Controller</h2>
                     <ul>
@@ -535,10 +549,8 @@ route()
 route()
     .from("/cars")
     .on(RequestMethod.POST)
-    .consumes(MediaType.JSON.getMediaType(),
-              MediaType.HTML.getMediaType())
-    .produces(MediaType.JSON, MediaType.JSP,
-              CustomMediaTypeResponder.MEDIA_TYPE)
+    .consumes(MediaType.JSON, MediaType.HTML)
+    .produces(MediaType.JSON, MediaType.JSP)
     .to(Home.class).save(param(Car.class));
                          </code></pre>
                 </section>
@@ -578,6 +590,9 @@ public CorsConfiguration demoConfig() {
     }
  </code></pre>
                 </section>
+                 <section>
+                    <h1>Demo</h1>
+                </section>
                 <section>
                     <h2>AeroGear.next</h2>
                         <ul>
@@ -591,11 +606,21 @@ public CorsConfiguration demoConfig() {
                         <h3>grow the community</h3>
                 </section>
                 <section>
-                    How do i get the stuff
+                    <h2>WHERE?</h2>
+                    <p>Github</p>
+                    <div>&nbsp;</div>
+                    <p>Maven</p>
+                    <div>&nbsp;</div>
+                    <p>Bower</p>
+                    <div>&nbsp;</div>
+                    <p>CocoaPods</p>
                 </section>
                 <!-- CDJDN STUFF -->
-               <!-- <section>
-                    FOrge stuff
+                <section>
+                    <h2>Time for something RAD</h2>
+                    <img src="../lib/pics/forge.png">
+                    <aside class="notes">
+                        FOrge stuff
                     create a new project
                     add cdi
                     jpa
@@ -604,14 +629,22 @@ public CorsConfiguration demoConfig() {
                     add an endpoint
                     add a scaffold
                     explain how we are working towards a aerogear plugin
+                    </aside>
                 </section>
                 <section>
-                    arquillain part
+                    <h2>Alien Invasion</h2>
+                    <img src="../lib/pics/arquillian_desktop_640x480.jpg">
+                    <aside class="notes">
+                        arquillain part
                     what is arquillian
                     regular example first
-                    browser example next
-                    mobile sim next
+                    mobile sim next ios, Android
                     device last
+                    </aside>
+                </section>
+                <section>
+                    <h2>Openshift</h2>
+                    <img src="../lib/pics/OpenShift-Logo.png">
                 </section>
                 <section>
                     learn more stuff
@@ -624,7 +657,7 @@ public CorsConfiguration demoConfig() {
                                 <li>Maven</li>
                                 <li>Github</li>
                             </ul>
-                </section>-->
+                </section>
                 <section>
                     <h2>Questions?</h2>
                     <img src="../lib/pics/philosoraptor.jpg" />
@@ -658,7 +691,7 @@ public CorsConfiguration demoConfig() {
 				progress: true,
 				history: true,
 
-				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+				theme: 'sky', // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
 
 				// Optional libraries used to extend on reveal.js

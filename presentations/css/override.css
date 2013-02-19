@@ -1,3 +1,8 @@
 .reveal .slides {
 	top: 40%;
 }
+
+}
+.blackout .state-background {
+	background: black
+}
