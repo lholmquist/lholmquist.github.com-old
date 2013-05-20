@@ -5,7 +5,7 @@ description: "Subject Matter Champion thoughts"
 tagline:
 categories: [Personal, Aerogear]
 tags: [Cordova, F2F]
-published: true
+published: false
 group: cordova
 ---
 {% include JB/setup %}
