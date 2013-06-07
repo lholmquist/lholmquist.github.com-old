@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Developing Enterprise iPhone Applications on JBoss</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/aerogear.css">
+        <link rel="stylesheet" href="../css/override.css">
+        <!--<link rel="stylesheet" href="../css/theme/sky.css" id="theme">-->
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../lib/css/zenburn.css">
+
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section >
+                    <h2>Developing Enterprise iPhone Applications on JBoss</h2>
+                </section>
+                <section>
+                    <h2>Who Am I ?</h2>
+                    <div style="">
+                        <ul>
+                            <li>Luke Holmquist</li>
+                            <li>JBoss by Red Hat(Sr. Software Engineer)</li>
+                            <li>Aerogear</li>
+                            <li>Blog: <a href="http://lholmquist.org">lholmquist.org</a></li>
+                            <li>Twitter: <a href="http://twitter.com/sienaluke">@Sienaluke</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>Why are we here?</h2>
+                    <ul>
+                        <li>Fill in the blank</li>
+                        <li>Learn Stuffs</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Current Stack</h2>
+                    <img style="max-width:none; max-height:none" src="../lib/pics/feature_aerogear_large.png">
+                    <aside class="notes">stack shift</aside>
+                </section>
+                <section>
+                    <h2>Mobile Application Client Types</h2>
+                    <img src="../lib/pics/mobiles.png" alt="">
+                </section>
+                <section>
+                    <h2>New Challenges</h2>
+                    <img src="../lib/pics/angry-old-man-with-computer.jpg">
+                </section>
+                <section>
+                    <h2>Connectivity</h2>
+                    <ul>
+                        <li>Carrier Networks</li>
+                        <li>Data Plans</li>
+                        <li>Cross Domain</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/dat-internet-connection_o_802546.jpg">
+                </section>
+                <section>
+                    <h2>Persistence</h2>
+                    <ul>
+                        <li>Device Storage</li>
+                        <li>Offline</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/mobile_storage.jpeg">
+                </section>
+                <section>
+                    <h2>Security</h2>
+                    <ul>
+                        <li>Security is Hard</li>
+                        <li>Lost Device</li>
+                    </ul>
+                    <div><img src="../lib/pics/you-shall-not-pass-meme.jpg"></div>
+                    <aside class="notes">oauth? other stuff?</aside>
+                </section>
+                <section>
+                    <h2>AeroGear</h2>
+                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <ul>
+                        <li>JBoss community project</li>
+                        <li>Dedicated to mobile development</li>
+                        <li>Common API</li>
+                        <ul>
+                            <li>Mobile Web</li>
+                            <li>Hybrid</li>
+                            <li>Native</li>
+                        </ul>
+                        <li>Client and Server Offerings</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Main Goal</h2>
+                    <ul>
+                        <li>Ease Development</li>
+                    </ul>
+                    <div>
+                        <img src="../lib/pics/best_friends_forever.jpg">
+                    </div>
+                </section>
+                <section>
+                    <h2>X code template</h2>
+                </section>
+                <section>
+                    <h2>X code template demo</h2>
+                </section>
+                <section>
+                    <h2>OTP</h2>
+                </section>
+                <section>
+                    <h2>OTP demo</h2>
+                </section>
+                 <section>
+                    <h2>AeroGear 2.0</h2>
+                        <ul>
+                            <li>Unified Push</li>
+                            <li>Data Sync</li>
+                            <li>Offline</li>
+                            <li>More Login Modules</li>
+                            <li>Scaffolding w/ Forge</li>
+                            <li>Cordova Plugins?</li>
+                            <li>More Platforms?</li>
+                        </ul>
+                        <p>&nbsp;</p>
+                        <h3>grow the community</h3>
+                </section>
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+
+            <!-- Presentation progress bar -->
+            <div class="progress"><span></span></div>
+
+        </div>
+
+        <script src="../lib/js/head.min.js"></script>
+        <script src="../js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+
+                theme: 'sky', // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+                    { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                    { src: '../plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
