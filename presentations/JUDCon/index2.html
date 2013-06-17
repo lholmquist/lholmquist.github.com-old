@@ -39,7 +39,7 @@
                     <h2>Developing Enterprise iPhone Applications on JBoss</h2>
                 </section>
                 <section>
-                    <h2>Who Am I ?</h2>
+                    <h2>Who Are We ?</h2>
                     <div style="">
                         <ul>
                             <li>Luke Holmquist</li>
@@ -51,24 +51,86 @@
                     </div>
                 </section>
                 <section>
+                    <h2>Who Are We ?</h2>
+                    <div style="">
+                        <ul>
+                            <li>Jay Balunas</li>
+                            <li>JBoss by Red Hat(Mobile Platform Architect)</li>
+                            <li>Formerly AeroGear & RichFaces Lead</li>
+                            <li>Blog: <a href="http://in.relation.to/Bloggers/Jay">in.relation.to/Bloggers/Jay</a></li>
+                            <li>Twitter: <a href="http://twitter.com/tech4j">@tech4j</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
                     <h2>Why are we here?</h2>
                     <ul>
-                        <li>Fill in the blank</li>
-                        <li>Learn Stuffs</li>
+                        <li>New requirements</li>
+                        <li>New technologies</li>
+                        <li>and...</li>
                     </ul>
                 </section>
                 <section>
-                    <h2>Current Stack</h2>
-                    <img style="max-width:none; max-height:none" src="../lib/pics/feature_aerogear_large.png">
-                    <aside class="notes">stack shift</aside>
+                    <h2>New Challenges</h2>
+                    <img src="../lib/pics/angry-old-man-with-computer.jpg">
                 </section>
                 <section>
                     <h2>Mobile Application Client Types</h2>
                     <img src="../lib/pics/mobiles.png" alt="">
                 </section>
                 <section>
-                    <h2>New Challenges</h2>
-                    <img src="../lib/pics/angry-old-man-with-computer.jpg">
+                    <h2>Why focus just on iOS</h2>
+                    <h3>For this talk?</h3>
+                    <img src="../lib/pics/iPhoneiAndiPad.jpg">
+                </section>
+                <section>
+                    <h2>Android is still critical</h2>
+                    <img src="../lib/pics/Gartner-1-market-shares1.jpg">
+                </section>
+                <section>
+                    <h2>iOS was first to the market</h2>
+                    <img src="../lib/pics/iphone_1_2_3_4_5_compared.jpg">
+                </section>
+                <section>
+                    <h2>iTunes is where the $$ is</h2>
+                    <img src="../lib/pics/available-on-iphone-app-store-logo-Copy.jpg">
+                </section>
+                <section>
+                    <h2>Apple devices are more</h2>
+                    <h3>Manageable...</h3>
+                    <img src="../lib/pics/macpc.jpg">
+                    <h4>... Sort Of?</h4>
+                </section>
+                <section>
+                    <h2>Wanted to expand our horizons</h2>
+                    <img src="../lib/pics/objc_for_java_dev.png">
+                </section>
+                <section>
+                    <h2>But what about the backend?</h2>
+                    <img src="../lib/pics/small_big load.jpg">
+                    <h3>Don't reinvent...</h3>
+                </section>
+                <section>
+                    <h2>What you have today works great!</h2>
+                </section>
+                <section>
+                    <h2>This is where AeroGear Comes In</h2>
+                    <img src="../lib/pics/aerogear-splash.png">
+                </section>
+                <section>
+                    <h2>AeroGear</h2>
+                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <ul>
+                        <li>JBoss community project</li>
+                        <li>Dedicated to mobile development</li>
+                        <li>Common API</li>
+                        <ul>
+                            <li>Mobile Web</li>
+                            <li>Hybrid</li>
+                            <li>Native</li>
+                        </ul>
+                        <li>Client and Server Offerings</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Connectivity</h2>
@@ -99,40 +161,94 @@
                     <aside class="notes">oauth? other stuff?</aside>
                 </section>
                 <section>
-                    <h2>AeroGear</h2>
-                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <h2>Unified Push Server</h2>
                     <ul>
-                        <li>JBoss community project</li>
-                        <li>Dedicated to mobile development</li>
-                        <li>Common API</li>
-                        <ul>
-                            <li>Mobile Web</li>
-                            <li>Hybrid</li>
-                            <li>Native</li>
-                        </ul>
-                        <li>Client and Server Offerings</li>
+                        <li>iOS & Android Native Push Server</li>
+                        <li>More on that later...</li>
                     </ul>
+                    <div><img src="../lib/pics/new-push-button-pjt4rq.png"></div>
                 </section>
                 <section>
-                    <h2>Main Goal</h2>
-                    <ul>
-                        <li>Ease Development</li>
-                    </ul>
+                    <h2>But Our Main Goal...</h2>
                     <div>
                         <img src="../lib/pics/best_friends_forever.jpg">
                     </div>
+                    <h3>Ease Development</h3>
+                </section>
+                <section>
+                    <h2>Core Concepts</h2>
+
+                </section>
+                <section>
+                    <h2>Pipeline - Connectivity</h2>
+                    <ul>
+                        <li>Access Your REST Services</li>
+                    </ul>
+                    <pre><code>
+// iOS
+_myPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
+                [config name:@"myPipe"];
+                [config endpoint:@"customEndpoint"];
+            }];
+
+[_myPipe read: ... ];
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>DataManager - Storage</h2>
+                    <ul>
+                        <li>Manager Your Data Client Side</li>
+                    </ul>
+                    <pre><code>
+// iOS
+id<AGStore> myStore = [dm store:^(id<AGStoreConfig> config) {
+    [config setName:@"tasks"];
+}];
+
+[myStore read: ... ];
+
+</code></pre>
+                </section>
+                <section>
+                    <h2>Auth - Security</h2>
+                    <ul>
+                        <li>Simplified Security Modules</li>
+                    </ul>
+                     <pre><code>
+// iOS
+_restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
+            [config name:@"restAuthMod"];
+            [config baseURL:projectsURL];
+        }];
+
+[_restAuthModule login ... ]
+        </code></pre>
+                </section>
+                <section>
+                    <h2>Trying to Get Started</h2>
+                    <img src="../lib/pics/unit_tests.gif">
                 </section>
                 <section>
                     <h2>X code template</h2>
+                    <div>
+                        <img src="../lib/pics/wizard.png">
+                    </div>
                 </section>
                 <section>
                     <h2>X code template demo</h2>
                 </section>
                 <section>
-                    <h2>OTP</h2>
+                    <h2>Todo App</h2>
+                    <div>
+                        <img src="../lib/pics/todo_ios.png">
+                    </div>
                 </section>
                 <section>
-                    <h2>OTP demo</h2>
+                    <h2>"One more thing..."</h2>
+                </section>
+                <section>
+                    <h2>Native Push SDK</h2>
+                    <h3>Demo</h3>
                 </section>
                  <section>
                     <h2>AeroGear 2.0</h2>
@@ -142,11 +258,18 @@
                             <li>Offline</li>
                             <li>More Login Modules</li>
                             <li>Scaffolding w/ Forge</li>
+                            <li>IDE Tooling ( JBDS )</li>
                             <li>Cordova Plugins?</li>
                             <li>More Platforms?</li>
                         </ul>
                         <p>&nbsp;</p>
                         <h3>grow the community</h3>
+                </section>
+                <section>
+                    <h2>Questions?</h2>
+                    <img src="../lib/pics/philosoraptor.jpg" />
+                    <div><a href="http://aerogear.org">Aerogear.org</a></div>
+                    <div><a href="http://github.com/aerogear">github.com/aerogear</a></div>
                 </section>
             </div>
 
@@ -193,3 +316,5 @@
 
     </body>
 </html>
+
+<!-- curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"key":"blah","alert":"Hello, JUDCon"}' http://keynotepushserver-lholmqui.rhcloud.com/ag-push/rest/sender/broadcast/8a5659fc3f193790013f200739ec0003-->
