@@ -8,7 +8,7 @@ tags: [aerogear.js, REST, WoW, node.js]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 ## Last Time
 

@@ -8,7 +8,7 @@ tags: [aerogear-android, REST, WoW, Android ]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 ##Last Time
 

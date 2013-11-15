@@ -7,7 +7,7 @@ categories: [Ideas, Personal]
 tags: [javascript, facebook]
 published: false
 ---
-{% include JB/setup %}
+
 
 ## Intro - The Problem
 
@@ -99,8 +99,8 @@ This is the Facebook API to get my data.  If you put an ID in instead of /me, th
 
 So what i want to do is get access to my groups.  First, we need to make sure that we have the appropriate permissions.  Accessing groups is actually an extended permission, so we need to the user to ok that first.
 
-    function loginUser() {    
-     FB.login(function(response) { }, {scope:'email, user_groups,publish_stream'});     
+    function loginUser() {
+     FB.login(function(response) { }, {scope:'email, user_groups,publish_stream'});
      }
 
 So here is a login function.  That second bunch of variables tells the FB api what permissions to ask the user for

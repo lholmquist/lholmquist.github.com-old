@@ -4,7 +4,6 @@ title: "About"
 published: false
 description: ""
 ---
-{% include JB/setup %}
 
 ### About Me
 

@@ -6,7 +6,7 @@ description: "The story behind the story creator and where it's going"
 categories: [Aerogear, JBoss, Ideas, Personal]
 tags: [javascript, bootstrap, java, Backbone, JBoss Forge, OpenShift]
 ---
-{% include JB/setup %}
+
 
 
 [Previously on Blog]({{ BASE_PATH }}{{ page.previous.url }}), I layed out the idea behind the Story Creator app.  A turn based version of Mad Libs that could possibly have a social aspect to it.  Possibly just mobile?

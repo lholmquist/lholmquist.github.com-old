@@ -7,7 +7,7 @@ categories: [Personal, Aerogear, Cordova]
 tags: [Cordova]
 published: false
 ---
-{% include JB/setup %}
+
 
 
 ## Intro

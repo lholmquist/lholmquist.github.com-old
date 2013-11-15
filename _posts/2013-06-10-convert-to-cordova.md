@@ -2,11 +2,12 @@
 layout: post
 title: "Convert to Cordova"
 description: ""
+category: articles
 categories: [Aerogear, Cordova, JUDCon]
 tags: [Cordova, Cool Cool, AeroGear, JUDCon]
 published: true
 ---
-{% include JB/setup %}
+
 
 
 ## Intro

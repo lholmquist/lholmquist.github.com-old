@@ -8,7 +8,7 @@ tags: [aerogear.js, REST, WoW]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 
 ## Westfall a.k.a.  AeroGear Data Manager

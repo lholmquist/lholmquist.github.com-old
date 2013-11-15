@@ -1,14 +1,9 @@
 ---
-layout: page
-title: Blog
-tagline: Yup
+layout: home
+description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
+tags: [Jekyll, theme, responsive, blog, template]
+image:
+  feature: texture-feature-01.jpg
+  credit: Texture Lovers
+  creditlink: http://texturelovers.com
 ---
-{% include JB/setup %}
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-

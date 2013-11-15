@@ -7,7 +7,7 @@ categories: [Aerogear, JBoss, Ideas, Personal]
 tags: [javascript, mongodb]
 published: true
 ---
-{% include JB/setup %}
+
 
 [Previously on Blog](/Aerogear/JBoss/Ideas/Personal/2012/11/22/start-over-2/),  Defining some Server API.
 

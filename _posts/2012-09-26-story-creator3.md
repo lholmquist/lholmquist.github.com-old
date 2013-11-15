@@ -7,7 +7,7 @@ description: "The story behind the story creator and where it's going"
 categories: [Aerogear, JBoss, Ideas, Personal]
 tags: [javascript, bootstrap, java, Backbone, JBoss Forge, OpenShift]
 ---
-{% include JB/setup %}
+
 
 [Previously on Blog]({{ BASE_PATH }}{{ page.previous.url }}), I made a few decisions on the backend and what the front end's styles would be.  Now all i had to do was figure out what JS framework i was going to use for the UI.
 

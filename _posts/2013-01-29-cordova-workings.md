@@ -8,7 +8,7 @@ tags: [Cordova, F2F]
 published: false
 group: cordova
 ---
-{% include JB/setup %}
+
 
 ## Intro
 

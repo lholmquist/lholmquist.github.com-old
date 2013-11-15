@@ -8,7 +8,7 @@ tags: [aerogear.js, REST, WoW]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 ## Enter Deadmines - Making the UI nicer
 

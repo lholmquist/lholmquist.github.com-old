@@ -7,7 +7,7 @@ categories: [mobile, testing]
 tags: [Arquillian, JBoss]
 published: true
 ---
-{% include JB/setup %}
+
 
 
 ## Last Time

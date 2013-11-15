@@ -8,7 +8,7 @@ tags: [aerogear.js, REST, WoW, Apache Cordova ]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 [Previously]({{ BASE_PATH }}{{ page.previous.url }}),  We traveled to Deadmines(HARD MODE) and added in some jQuery Mobile to make it feel like a more native experience.
 

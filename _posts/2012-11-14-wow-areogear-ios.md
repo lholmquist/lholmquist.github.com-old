@@ -8,7 +8,7 @@ tags: [aerogear-ios, REST, WoW, iPhone ]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 ##Last Time
 

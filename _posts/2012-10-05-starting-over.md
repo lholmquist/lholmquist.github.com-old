@@ -9,7 +9,7 @@ categories: [Aerogear, JBoss, Ideas, Personal]
 tags: [javascript, aerogear.js]
 ---
 
-{% include JB/setup %}
+
 
 [Previously on Blog]({{ BASE_PATH }}{{ page.previous.url }}),  I decided to use Backbone.js for my UI layer and i also realized i didn't have security on my endpoints.  Time to start over.
 

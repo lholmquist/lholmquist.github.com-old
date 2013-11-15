@@ -6,7 +6,7 @@ description: "The story behind the story creator and where it's going"
 categories: [Aerogear, JBoss, Ideas, Personal]
 tags: [javascript, bootstrap, java, OpenShift]
 ---
-{% include JB/setup %}
+
 
 
 ## What is Story Creator?

@@ -8,6 +8,6 @@ tags: [aerogear.js, AeroGear.Controller, jboss AS 7, CORS, M8 release]
 published: false
 group: controller-aerogear
 ---
-{% include JB/setup %}
+
 
 ## Intro

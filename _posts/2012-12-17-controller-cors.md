@@ -8,7 +8,7 @@ tags: [aerogear.js, AeroGear.Controller, jboss AS 7, CORS, M7 release]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 ## Intro
 
@@ -16,7 +16,7 @@ This week marks another milestone release for the [AeroGear project with 1.0.0.M
 
 Let's take a quick look at how we can now interact with AeroGear Controller by using AeroGear.js
 
-_This example will be showing off the CORS functionality for both libs, so you will need to download 2 repo's.  
+_This example will be showing off the CORS functionality for both libs, so you will need to download 2 repo's.
 Also, you will need JBoss As 7 for the server, so hurry up and [go get it](http://www.jboss.org/as7)._
 
 ### AeroGear Controller

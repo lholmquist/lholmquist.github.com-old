@@ -8,7 +8,7 @@ tags: [aerogear.js, AerGear iOS, Cordova]
 published: true
 group: wowaerogear
 ---
-{% include JB/setup %}
+
 
 
 ## Intro
@@ -37,7 +37,7 @@ You will also need to add the AeroGear iOS libs to the project.  Easiest way is 
 
 Ok,  now that we have a base project,  time to create our plugin.  _The New project should be opened with the workspace file once you add the AeroGear libs in._
 
-Ok, We are now in XCode.  We need to create a new file in the Plugins directory.  
+Ok, We are now in XCode.  We need to create a new file in the Plugins directory.
 
 + Right-click or File>new will work.
 + Choose Objective-C class, then click "next"
@@ -64,14 +64,14 @@ Now we just need to implement this file in the .m file
     #import "AGPlugin.h"
     #import <Cordova/CDV.h>
     #import <AeroGear/AeroGear.h>
-    
+
     @implementation AGPlugin
-    
+
     - (void) read:(CDVInvokedUrlCommand *)command {
-    
+
     }
-    
-    
+
+
     @end
 
 We should have something like the above.
@@ -97,7 +97,7 @@ Now lets call the read method:
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:responseObject];
         NSString* javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
         [self writeJavascript:javaScript];
-    
+
     } failure:^(NSError *error) {
         NSLog(@"An error has occured during fetch! \n%@", error);
     }];

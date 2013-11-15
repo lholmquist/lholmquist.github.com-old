@@ -6,7 +6,7 @@ categories: [Cordova, PhoneGap, Yeoman, Plugman]
 tags: [Cordova, Cool Cool, Yeoman, Allo Allo]
 published: true
 ---
-{% include JB/setup %}
+
 
 ## The Problem
 

@@ -3,11 +3,12 @@ layout: post
 title: "Let's Start"
 tagline: "The Beginning"
 description: "The start of the blogging experience"
+category: articles
 categories: [Aerogear, JBoss, Red Hat]
 tags: [first post, starting, Spinal Tap]
 date: 2012-09-15
 ---
-{% include JB/setup %}
+
 
 
 When i thought about writing a blog, i could never think of what it should be about.  Would anyone really care what i had to say? Hmmmmm,  I don't know, but I'm starting one anyway.
