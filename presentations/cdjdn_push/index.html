@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aerogear - CDJDN Version</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/override.css">
+        <link rel="stylesheet" href="../css/theme/sky.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../lib/css/zenburn.css">
+
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>AeroGear Push Notifications</h1>
+                    <img id='sp' src="../lib/pics/push-it-real-good-o.gif">
+                    <audio src="http://upload.wikimedia.org/wikipedia/en/1/18/Push_It_by_Salt-N-Pepa.ogg"></audio>
+                </section>
+                <section>
+                    <h2>Who Am I ?</h2>
+                    <div style="">
+                        <ul>
+                            <li>Luke Holmquist</li>
+                            <li>JBoss by Red Hat(Sr. Software Engineer)</li>
+                            <li>Aerogear - Javascript Tech Lead</li>
+                            <li>Blog: <a href="http://lholmquist.org">lholmquist.org</a></li>
+                            <li>Twitter: <a href="http://twitter.com/sienaluke">@Sienaluke</a>
+                           </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>Agenda</h2>
+                        <ul>
+                            <li>Push Notifications?</li>
+                            <li>Unified Push</li>
+                            <li>iOS - Demo</li>
+                            <li>Android - Demo</li>
+                            <li>SimplePush - Demo</li>
+                        </ul>
+                </section>
+                <section>
+                    <h2>Push Notifications?</h2>
+                </section>
+                <section>
+                    <h2>APNs</h2>
+                    <div>Apple Push Notification service</div>
+                    <ul>
+                        <li>iOS</li>
+                        <li>Safari ( on Mavericks )</li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="../lib/pics/ios7-gmail-push.png">
+                </section>
+                <section>
+                    <h2>APNs - Message</h2>
+                    <ul>
+                        <li>Max 256 bytes</li>
+                        <li>It's Just JSON</li>
+                    </ul>
+                    <pre>
+                        <code>
+{
+    aps: {
+        alert: "The Message",
+        badge: 1,
+        sound: "default"
+    }
+}
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h2>Developer Portal Setup</h2>
+                    <img src="../lib/pics/unit_tests.gif">
+                </section>
+                <section>
+                    <h2>GCM</h2>
+                    <div>Google Cloud Messaging</div>
+                    <ul>
+                        <li>Android</li>
+                        <li>Chrome Packaged Apps</li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="../lib/pics/android_push_center.png">
+                </section>
+                <section>
+                    <h2>GCM - Message</h2>
+                    <ul>
+                        <li>Max 4kb bytes</li>
+                        <li>It's Just JSON</li>
+                    </ul>
+                    <pre>
+                        <code>
+{
+  "data" : {
+    "Nick" : "Mario",
+    "Text" : "great match!",
+    "Room" : "PortugalVSDenmark",
+  },
+}
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h2>API Console Setup</h2>
+                    <img src="../lib/pics/Simpsons1-300x225.jpg">
+                </section>
+                <section>
+                    <h2>Simple Push</h2>
+                    <div>Push Messages for the Web</div>
+                    <ul>
+                        <li>FireFox OS</li>
+                        <li>FireFox?</li>
+                    </ul>
+                </section>
+                 <section>
+                    <img src="../lib/pics/ffos_push.png">
+                </section>
+                <section>
+                    <h2>SimplePush - Message</h2>
+                    <ul>
+                        <li>Data Free</li>
+                        <li>It's a Doorbell, Not a Walkie Talkie</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>FFOS Setup</h2>
+                     <img src="../lib/pics/ffos_push_setup.png">
+                </section>
+                <section>
+                    <h2>SimplePush - How It Works</h2>
+                    <div>
+                        <pre><code>
+//Javascript
+
+var register = navigator.push.register()
+
+// Returns( in a callback ) a URL
+
+register.onsuccess = function( event ) {
+    console.log( event.target.result );
+
+    // => https://push.services.mozilla.com/update/01aLongStringOfCrap123...
+}
+                        </code></pre>
+                    </div>
+                    AeroGear Polyfill library available
+
+                </section>
+                <section>
+                    <h2>AeroGear SimplePush Server</h2>
+                    <ul>
+                        <li>Vert.x</li>
+                        <li>Netty</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Others</h2>
+                    <ul>
+                        <li>Amazon Device Messaging - ADM</li>
+                        <li>Microsoft Push Notification Service - MPNS</li>
+                        <li>BlackBerry Push Service</li>
+                        <li>Insert New Company Here.....</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Flow</h2>
+                    <img src='../lib/pics/registration_sequence_2x.png'>
+                </section>
+                <section>
+                    <h2>Flow</h2>
+                    <img src='../lib/pics/remote_notif_simple_2x.png'>
+                </section>
+                <section>
+                    <h2>AeroGear Unified Push Server</h2>
+                    <div>
+                        "The AeroGear UnifiedPush Server is a server that allows sending native push messages to different mobile operation systems. "
+                    </div>
+                </section>
+                <section>
+                    <h2>AeroGear Unified Push Server</h2>
+                    <img src='../lib/pics/aerogear_unified_push_server.png'>
+                </section>
+                <section>
+                    <h2>Some Vocabulary First</h2>
+                    <ul>
+                        <li>Push Application</li>
+                        <li>Variant</li>
+                        <li>Installation</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>RESTFul API's</h2>
+                    <ul>
+                        <li>Registration</li>
+                        <li>Sender</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>cURL</h2>
+                    <img src='../lib/pics/curl.png'/>
+                </section>
+                <section>
+                    <h2>Snazzy Admin UI</h2>
+                    <img src="../lib/pics/console-push-applications.png"/>
+                </section>
+                <section>
+                    <h2>Slick Java & Node Sender Clients</h2>
+                    <img src="../lib/pics/java_sender.png"/>
+                    <br><br>
+                    <small>CLI version's Coming Soon!!</small>
+                </section>
+                <section>
+                    <h2>Run In The Cloud</h2>
+                    <img src="../lib/pics/ag-openshift.png"/>
+                    <br>
+                    <br>
+                    <div><small>or locally, it's just a war file</small></div>
+                </section>
+                <section>
+                    <h2>Platform SDK's</h2>
+                    <img src='../lib/pics/best_friends_forever.jpg'/>
+                </section>
+                <section>
+                    <h2>iOS</h2>
+                    <img src='../lib/pics/push_app_ios.png'/>
+                </section>
+                <section>
+                    <h2>Android</h2>
+                    <img src='../lib/pics/push_app_android.png'/>
+                </section>
+                <section>
+                    <h2>SimplePush</h2>
+                    <img src='../lib/pics/js_1.png'/>
+                    <img src='../lib/pics/js_2.png'/>
+                    <img src='../lib/pics/js_3.png'/>
+                </section>
+                <section>
+                    Demo
+                </section>
+                <section>
+                    <h2>Questions?</h2>
+                    <img src="../lib/pics/philosoraptor.jpg" />
+                    <div><a href="http://aerogear.org/docs/specs/aerogear-server-push/">Unified Push Server</a></div>
+                    <div><a href="http://github.com/aerogear">github.com/aerogear</a></div>
+                    <div><a href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush Spec</a></div>
+                </section>
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+
+            <!-- Presentation progress bar -->
+            <div class="progress"><span></span></div>
+
+        </div>
+
+        <script src="../lib/js/head.min.js"></script>
+        <script src="../js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+
+                theme: 'sky', // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+                    { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                    { src: '../plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                ]
+            });
+
+            var audio = document.querySelector('audio');
+            var img = document.getElementById('sp');
+
+            img.addEventListener( 'click', toggle, false );
+
+            function toggle( event ){
+                audio.paused ? audio.play() : audio.pause();
+            };
+
+        </script>
+
+    </body>
+</html>
