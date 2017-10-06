@@ -64,3 +64,5 @@ timezone:    America/New_York
 future:      true
 pygments:    true
 markdown:    kramdown
+
+theme: jekyll-theme-minimal
