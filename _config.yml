@@ -65,4 +65,4 @@ future:      true
 pygments:    true
 markdown:    kramdown
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-tactile
