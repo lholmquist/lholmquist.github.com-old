@@ -4,6 +4,8 @@ metadata:
   name: lholmquist.github.com-old
   annotations:
     github.com/project-slug: lholmquist/lholmquist.github.com-old
+  labels:
+    label: one
 spec:
   type: other
   lifecycle: unknown
